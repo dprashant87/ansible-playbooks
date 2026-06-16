@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+
+  tasks:
+
+    - name: Create devops user
+      user:
+        name: devops
+        shell: /bin/bash
+        create_home: yes
+        state: present
